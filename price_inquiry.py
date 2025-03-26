@@ -64,7 +64,7 @@ def get_price_data(datas):
         if price_data['list']:
             # 遍历所有列表项寻找规格匹配项
             for item in price_data['list']:
-                if item["specInfo"] == datas["新发地规格"]:
+                if item["specInfo"] == datas["新发地规格"] or item["specInfo"] == "":
                     # 找到匹配规格，返回对应价格
                     return datas['凭证号'], item['avgPrice']
 

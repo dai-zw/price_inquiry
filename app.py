@@ -145,7 +145,7 @@ def get_price_data(data, config):
 
         if price_data['list']:
             for item in price_data['list']:
-                if item["specInfo"] == data["新发地规格"]:
+                if item["specInfo"] == data["新发地规格"] or item["specInfo"] == "":
                     return data['凭证号'], item['avgPrice']
             return data['凭证号'], "规格不匹配"
         else:
