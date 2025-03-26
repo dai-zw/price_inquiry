@@ -1,0 +1,15 @@
+# 路径
+INPUT_PATH: './input_csv/2024年2月份三元鑫溢采购入库金额.csv'
+OUTPUT_PATH: './output_csv/2024年2月份三元鑫溢采购入库金额(已更新).csv'
+
+# 编码格式
+encoding: "gbk"
+
+# 行号
+voucher: 0  # 凭证号所在列的索引
+xfd_row: 4  # 新发地名称所在列的索引
+specInfo_row: 5  # 新发地规格所在列的索引
+priceInquiry_row: 13  # 询价所在列的索引
+
+# 跳过的新发地名称列表
+skipped_names: ['#N/A', '', "0"]

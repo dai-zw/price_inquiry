@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV 数据处理工具</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; }
+        form > div { margin: 15px 0; }
+        label { display: inline-block; width: 220px; }
+        input[type="number"] { width: 60px; }
+    </style>
+</head>
+<body>
+    <h1>CSV 数据处理工具</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <label>选择CSV文件:</label>
+            <input type="file" name="file" required>
+        </div>
+
+        <div>
+            <label>文件编码:</label>
+            <input type="text" name="encoding" value="gbk" required>
+        </div>
+
+        <div>
+            <label>凭证号列索引:</label>
+            <input type="number" name="voucher" value="0" required>
+        </div>
+
+        <div>
+            <label>新发地名称列索引:</label>
+            <input type="number" name="xfd_row" value="4" required>
+        </div>
+
+        <div>
+            <label>规格信息列索引:</label>
+            <input type="number" name="specInfo_row" value="5" required>
+        </div>
+
+        <div>
+            <label>询价列索引:</label>
+            <input type="number" name="priceInquiry_row" value="13" required>
+        </div>
+
+        <div>
+            <label>日期列索引:</label>
+            <input type="number" name="date_row" value="7" required>
+        </div>
+
+        <div>
+            <label>忽略的名称 (逗号分隔):</label>
+            <input type="text" name="skipped_names" value="#N/A, , 0" required>
+        </div>
+
+        <div>
+            <button type="submit">处理并下载</button>
+        </div>
+    </form>
+</body>
+</html>
